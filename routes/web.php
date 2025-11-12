@@ -7,4 +7,4 @@ Route::get('/', function () {
 }); #default
 
 
-Route::view('home', 'home'); #this is my first project
+Route::view('portfolio', 'portfolio'); #this is my portfolio
