@@ -937,7 +937,7 @@
                   </div>
               </div>
               <div class="col-lg-6 animate">
-                  <img src="jojo.jpg" alt="Profile Photo" class="hero-img img-fluid">
+                  <img src="Images/aello.png" alt="Photo" class="hero-img img-fluid">
               </div>
           </div>
       </div>
