@@ -1107,7 +1107,7 @@
                       <span class="card__by">by <a href="#" class="card__author" title="author">Aelloren</a></span>
                   </div>
               </article>
-              
+
               <article class="project-card">
                   <div class="card__info-hover">
                       <svg class="card__like" viewBox="0 0 24 24">
@@ -1120,10 +1120,13 @@
                           <span class="card__time">50 min</span>
                       </div>
                   </div>
-                  <div class="card__img"></div>
+
+    <div class="card__img"></div>
+
                   <a href="#" class="card_link">
-                      <div class="card__img--hover" style="background-image: url('https://scontent.fcrk1-1.fna.fbcdn.net/v/t1.15752-9/487068238_3947225105524175_828917601720312967_n.png?stp=dst-png_s1080x2048&_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeGd_TTKBQaHo76eDNFmkJMwc-UtmSvtH-Nz5S2ZK-0f47sbSPjFyXWApiwaKSvnDsHOC6S8h84pwjUHM0LLgYdp&_nc_ohc=ZW4cBPCV7rgQ7kNvwGdGE8L&_nc_oc=AdlaknyUR8WQpCzDbzFng8I5P1DKgMj-IgP7hJl1QaSt_zOyh-3z6-z2FuwnZqswfx4&_nc_zt=23&_nc_ht=scontent.fcrk1-1.fna&oh=03_Q7cD1wFJzn-hkDIju1VmlrYgwk7Nv8yTmRZOWMoaKTZ1B9ZHGw&oe=6817666A')"></div>
+                      <div class="card__img--hover" style="background-image: url('Mariano_Poster_1.png')"></div>
                   </a>
+
                   <div class="card__info">
                       <span class="card__category">Photoshop Adobe</span>
                       <h3 class="card__title">Branding CounT</h3>
