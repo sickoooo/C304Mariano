@@ -720,8 +720,7 @@
                         <span>I</span><span>'</span><span>m</span><span> </span>
                         <span style="color: var(--primary-color);">A</span><span style="color: var(--primary-color);">e</span><span style="color: var(--primary-color);">l</span><span style="color: var(--primary-color);">l</span><span style="color: var(--primary-color);">o</span><span style="color: var(--primary-color);">r</span><span style="color: var(--primary-color);">e</span><span style="color: var(--primary-color);">n</span>
                       </h1>
-                      <p>UI/UX</p>
-                      
+                      <p>Newbie programmer</p>
                       <div class="d-flex flex-wrap gap-3">
                           <a href="#contact" class="btn btn-custom">Send a Message</a>
                           <a href="AellorenCV.pdf" class="btn btn-outline-custom" download>Download CV</a>
@@ -745,8 +744,8 @@
                   <div class="card p-4 flex-grow-1">
                       <h4 class="mb-3" style="color: var(--secondary-color);">Who I Am</h4>
                       <p class="lead" style="font-weight: 500;">I am Aelloren, 20 years old.</p>
-                      <p>My life is a balance of fun, chaos, and relaxation. I love spending my time caring for my <strong>19 pets</strong>, hanging out with friends online, or sneaking out with my sister every midnight for snack runs.</p>
-                      <p class="mb-0">When I'm at home, you'll usually find me listening to music—whether I'm cleaning, cooking, reading, or just taking a relaxing bath. It sets the vibe for everything I do.</p>
+                      <p>My life is a balance of fun, stress, and relaxation. I love spending my time caring for my <strong>19 pets</strong>, hanging out with friends online.</p>
+                      <p class="mb-0">When I'm at home, you'll usually find me listening to music—whether I'm cleaning, cooking, reading, or taking a bath. It sets the vibe for everything I do.</p>
                   </div>
                   
                   <h5 class="text-center mt-4 mb-2" style="color: var(--secondary-color); letter-spacing: 2px; font-weight: 700;">CONNECT WITH ME</h5>
@@ -807,7 +806,7 @@
                           <div class="card p-3 text-center h-100 justify-content-center align-items-center">
                               <i class="fas fa-music fa-2x mb-2" style="color: var(--primary-color);"></i>
                               <h6 class="fw-bold">Music</h6>
-                              <p class="small text-muted mb-0">Cooking & Cleaning</p>
+                              <p class="small text-muted mb-0">I Love musics</p>
                           </div>
                       </div>
                   </div>
@@ -855,7 +854,7 @@
                           </div>
                       </div>
                       <h5 class="fw-bold" style="color: var(--secondary-color);">MLBB Tournament</h5>
-                      <p class="small text-muted mb-0">Achievement in Mobile Legends: Bang Bang competitive play.</p>
+                      <p class="small text-muted mb-0">Software Day (SFD) Champion in Mobile Legends: Bang Bang.</p>
                   </div>
               </div>
           </div>
