@@ -5,7 +5,6 @@
     <title>Create Project | Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -21,7 +20,6 @@
 
 <div class="min-h-screen flex">
 
-    <!-- Sidebar -->
     <aside class="w-64 bg-white/90 border-r border-slate-200 shadow-sm hidden md:flex flex-col">
         <div class="px-6 py-5 flex items-center gap-3 border-b border-slate-100">
             <div class="h-9 w-9 rounded-2xl bg-rose-500/10 flex items-center justify-center">
@@ -35,28 +33,44 @@
 
         <nav class="flex-1 px-4 py-4 space-y-1 text-sm">
             <a href="{{ route('admin.dashboard') }}"
-               class="flex items-center gap-2 px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-100 hover:text-slate-900">
+               class="flex items-center gap-2 px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">
                 <span>🏠</span>
                 <span>Dashboard</span>
             </a>
 
             <a href="{{ route('admin.portfolio.index') }}"
-               class="flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-900 text-slate-50 font-medium">
+               class="flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-900 text-slate-50 font-medium transition-colors">
                 <span>🖼️</span>
                 <span>Manage Portfolio</span>
+            </a>
+
+            <a href="{{ route('admin.users.index') }}" 
+               class="flex items-center gap-2 px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span>Manage Users</span>
             </a>
         </nav>
 
         <div class="px-4 py-4 border-t border-slate-100 text-xs text-slate-400">
             <p>Logged in as</p>
             <p class="font-medium text-slate-700">Admin</p>
+            <form action="{{ route('logout') }}" method="POST" class="mt-3">
+                @csrf
+                <button type="submit" class="w-full flex items-center gap-2 px-3 py-2 rounded-xl text-rose-600 hover:bg-rose-50 hover:text-rose-700 transition text-left text-sm font-medium">
+                    <span>🚪</span>
+                    <span>Logout</span>
+                </button>
+            </form>
         </div>
     </aside>
 
-    <!-- Main -->
     <div class="flex-1 flex flex-col">
 
-        <!-- Top bar -->
         <header class="bg-white/90 border-b border-slate-200 backdrop-blur">
             <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
                 <div>
@@ -74,7 +88,6 @@
             </div>
         </header>
 
-        <!-- Content -->
         <main class="flex-1">
             <div class="max-w-6xl mx-auto px-4 py-6 md:py-8 space-y-6">
 
@@ -90,18 +103,15 @@
                     </div>
                 @endif
 
-                <!-- Main card: form + preview -->
                 <section class="bg-white rounded-3xl shadow-sm border border-slate-100 px-4 py-5 md:px-6 md:py-6">
                     <div class="grid gap-8 md:grid-cols-3">
 
-                        <!-- Form (left 2 columns) -->
                         <div class="md:col-span-2 space-y-5">
                             <h2 class="text-sm font-semibold text-slate-900">Project details</h2>
 
                             <form action="{{ route('admin.portfolio.store') }}" method="POST" class="space-y-4">
                                 @csrf
 
-                                <!-- Title -->
                                 <div>
                                     <label class="block text-xs font-medium text-slate-600 mb-1.5" for="title">
                                         Title *
@@ -117,7 +127,6 @@
                                     >
                                 </div>
 
-                                <!-- Subtitle -->
                                 <div>
                                     <label class="block text-xs font-medium text-slate-600 mb-1.5" for="subtitle">
                                         Subtitle
@@ -132,7 +141,6 @@
                                     >
                                 </div>
 
-                                <!-- Description -->
                                 <div>
                                     <label class="block text-xs font-medium text-slate-600 mb-1.5" for="description">
                                         Description
@@ -146,7 +154,6 @@
                                     >{{ old('description') }}</textarea>
                                 </div>
 
-                                <!-- Image URL -->
                                 <div>
                                     <label class="block text-xs font-medium text-slate-600 mb-1.5" for="image_url">
                                         Image URL
@@ -164,7 +171,6 @@
                                     </p>
                                 </div>
 
-                                <!-- Links -->
                                 <div class="grid gap-4 md:grid-cols-2">
                                     <div>
                                         <label class="block text-xs font-medium text-slate-600 mb-1.5" for="github_url">
@@ -195,7 +201,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Sort order -->
                                 <div class="grid gap-4 md:grid-cols-2">
                                     <div>
                                         <label class="block text-xs font-medium text-slate-600 mb-1.5" for="sort_order">
@@ -215,7 +220,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Submit -->
                                 <div class="pt-3 flex items-center gap-3">
                                     <button
                                         type="submit"
@@ -232,7 +236,6 @@
                             </form>
                         </div>
 
-                        <!-- Preview card (right column) -->
                         <div class="space-y-4">
                             <h2 class="text-sm font-semibold text-slate-900">Preview</h2>
 
@@ -276,7 +279,6 @@
             </div>
         </main>
 
-        <!-- Footer -->
         <footer class="border-t border-slate-200 bg-white/80 mt-4">
             <div class="max-w-6xl mx-auto px-4 py-3 text-[11px] text-slate-400 flex items-center justify-between">
                 <span>© {{ date('Y') }} Aelloren • Admin</span>

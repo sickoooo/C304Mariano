@@ -5,8 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\PortfolioController;
-// We commented this out because we are skipping the DB query for now
-// use App\Models\Portfolio; 
+use App\Http\Controllers\Admin\UserController; // <--- Added this import
 
 /*
 |--------------------------------------------------------------------------
@@ -20,14 +19,11 @@ Route::get('/', function () {
 })->name('home');
 
 // 2. USER PORTFOLIO - This is the page users see AFTER logging in
-// We use 'auth' middleware to ensure they are logged in first.
 Route::get('/portfolio', function () {
     
-    // FIX: We replaced the database query with an empty array.
-    // This stops the "Table 'mariano.portfolios' doesn't exist" error.
+    // FIX: Passing empty array to avoid DB error for now
     $projects = []; 
 
-    // resources/views/portfolio.blade.php
     return view('portfolio', compact('projects'));
 
 })->middleware('auth')->name('user.portfolio');
@@ -59,6 +55,9 @@ Route::middleware('auth')
             return view('admin.dashboard');
         })->name('dashboard');
 
-        // /admin/portfolio -> PortfolioController@index, create, store, etc.
+        // Manage Portfolio Routes
         Route::resource('portfolio', PortfolioController::class)->except(['show']);
+
+        // Manage Users Routes (Added this)
+        Route::resource('users', UserController::class);
     });

@@ -623,7 +623,16 @@
                   <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                   <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                   <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                  
                   <li class="nav-item ms-3"><div class="theme-toggle" id="theme-toggle"></div></li>
+                  
+                  <li class="nav-item ms-3">
+                    <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                        @csrf
+                        <button type="submit" class="btn btn-custom" style="padding: 6px 15px; font-size: 0.85rem; border-radius: 4px;">Logout</button>
+                    </form>
+                  </li>
+
               </ul>
           </div>
       </div>
@@ -762,13 +771,6 @@
                               <a href="https://discord.com/users/869434885553664081" target="_blank" class="social-btn mx-3" title="Discord"><i class="bi bi-discord"></i></a>
                           </div>
                           <div class="logo-slide">
-                              <a href="https://www.instagram.com/sick.6six/" target="_blank" class="social-btn mx-3" title="Instagram"><i class="bi bi-instagram"></i></a>
-                              <a href="https://x.com/AlienFranks" target="_blank" class="social-btn mx-3" title="X"><i class="bi bi-twitter-x"></i></a>
-                              <a href="https://www.facebook.com/sickooooo" target="_blank" class="social-btn mx-3" title="Facebook"><i class="bi bi-facebook"></i></a>
-                              <a href="https://github.com/sickoooo" target="_blank" class="social-btn mx-3" title="GitHub"><i class="bi bi-github"></i></a>
-                              <a href="https://discord.com/users/869434885553664081" target="_blank" class="social-btn mx-3" title="Discord"><i class="bi bi-discord"></i></a>
-                          </div>
-                           <div class="logo-slide">
                               <a href="https://www.instagram.com/sick.6six/" target="_blank" class="social-btn mx-3" title="Instagram"><i class="bi bi-instagram"></i></a>
                               <a href="https://x.com/AlienFranks" target="_blank" class="social-btn mx-3" title="X"><i class="bi bi-twitter-x"></i></a>
                               <a href="https://www.facebook.com/sickooooo" target="_blank" class="social-btn mx-3" title="Facebook"><i class="bi bi-facebook"></i></a>
@@ -938,7 +940,6 @@
                               <div class="progress-bar" role="progressbar" style="width: 30%; background-color: var(--primary-color);" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
                       </div>
-
                   </div>
               </div>
 
